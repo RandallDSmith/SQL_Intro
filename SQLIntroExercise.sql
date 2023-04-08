@@ -4,7 +4,7 @@
 -- find all products that cost $1400
  SELECT * FROM bestbuy.products WHERE cost = 1400.00;
 -- find all products that cost $11.99 or $13.99
- SELECT * FROM bestbuy.products as p WHERE p.Price = 11.99 OR p.Price = 13.99; 
+ SELECT * FROM bestbuy.products AS p WHERE p.Price = 11.99 OR p.Price = 13.99; 
 -- find all products that do NOT cost 11.99 - using NOT
  SELECT * FROM bestbuy.products as p WHERE NOT p.Price = 11.99;
 -- find  all products and sort them by price from greatest to least

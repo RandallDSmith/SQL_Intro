@@ -2,7 +2,7 @@
 -- find all products 
  SELECT * FROM bestbuy.products;
 -- find all products that cost $1400
- SELECT * FROM bestbuy.products WHERE cost = 1400.00;
+ SELECT * FROM bestbuy.products WHERE products.Price = 1400.00;
 -- find all products that cost $11.99 or $13.99
  SELECT * FROM bestbuy.products AS p WHERE p.Price = 11.99 OR p.Price = 13.99; 
 -- find all products that do NOT cost 11.99 - using NOT
@@ -24,4 +24,4 @@
 -- find all Geek Squad employees who don't have a middle initial 
  SELECT * FROM bestbuy.employees AS e Where e.Title = 'geek squad' AND e.MiddleInitial is NULL;
 -- find all products from the products table whose stock level is in the range  -- of 500 to 1200. Order by Price from least to greatest. **Use the between keyword** 
-SELECT * FROM bestbuy.products AS p WHERE p.StockLevel BETWEEN 500 AND 1200 ORDER BY p.StockLevel ASC;
+SELECT * FROM bestbuy.products AS p WHERE p.StockLevel BETWEEN 500 AND 1200 ORDER BY p.Price;
